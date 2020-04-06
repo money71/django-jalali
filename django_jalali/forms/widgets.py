@@ -6,8 +6,7 @@ import datetime
 import jdatetime
 
 
-class jDateInput(widgets.Input):
-    input_type = 'text'
+class jDateInput(widgets.DateInput):
     format = None
 
     def __init__(self, attrs=None, format=None):
@@ -40,8 +39,7 @@ class jDateInput(widgets.Input):
         return super(jDateInput, self)._has_changed(self._format_value(initial), data)
 
 
-class jDateTimeInput(widgets.Input):
-    input_type = 'text'
+class jDateTimeInput(widgets.DateTimeInput):
     format = '%Y-%m-%d %H:%M:%S'     # '2006-10-25 14:30:59'
 
     def __init__(self, attrs=None, format=None):
